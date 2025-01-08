@@ -16,6 +16,7 @@ SEARCH_TAGS = {
     "hasranged": ("weapons__isRanged", [Unit]),
     "faction": ("faction__shortName", [Unit, Event, Theme, Enhancement, Terrain]),
     "type": ("types__type", [Unit]),
+    "special": ("weapons__specials__name", [Unit]),
 }
 
 
