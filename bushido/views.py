@@ -139,7 +139,7 @@ def featDetails(request, featid):
     return render(request, 'bushido/detail_views/feat_details.html', {'feat': feat})
 
 
-@permission_required("bushido.change_ki_feat")
+@permission_required("bushido.change_kifeat")
 def editFeat(request, featid):
     feat = get_object_or_404(KiFeat, pk=featid)
     if request.method == "POST":
@@ -152,7 +152,7 @@ def editFeat(request, featid):
     return render(request, 'bushido/edit_views/edit_feat.html', {'feat': feat, "form": form})
 
 
-@permission_required("bushido.add_ki_feat")
+@permission_required("bushido.add_kifeat")
 def add_feat(request):
     if request.method == "POST":
         form = EditFeat(request.POST)
